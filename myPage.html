@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="myStyle.css">
+    
+</head>
+<body>
+    <div class="title">
+        <h1>TO DO List</h1>
+    </div>
+
+    <div class="inputField">
+        <form>
+            <input type="text" id="task" name="task" placeholder="Enter task name">
+            <input type="submit" value="Add" onclick="saveInput(event);">
+        </form>
+    </div>
+
+    <div class="chooseListButtons">
+        <button type="button" onclick="chooseAll()">All</button>
+        <button type="button" onclick="chooseCompleted()">Completed</button>
+        <button type="button" onclick="chooseIncompleted()">Incompleted</button>
+    </div>
+
+    <div class="taskList" id="taskList"></div>
+
+    <div class="clearButton">
+        <button type="button" onclick="clearAll()">Clear All</button>
+    </div>
+
+    <script src="myScript.js"></script>
+    
+</body>
+</html>
