@@ -5,31 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="myStyle.css">
+    <link rel="stylesheet" href="myStyleForDivs.css">
+    <link rel="stylesheet" href="myStyleForButtons.css">
     
 </head>
 <body>
-    <div class="title">
+    <div class="titleDiv">
         <h1>TO DO List</h1>
     </div>
 
-    <div class="inputField">
+    <div class="inputField" id="inputField">
         <form>
-            <input type="text" id="task" name="task" placeholder="Enter task name">
-            <input type="submit" value="Add" onclick="saveInput(event);">
+            <input type="text" class="inputBox" id="task" name="task" placeholder="Enter task name">
+            <input type="submit" class="addButton" value="Add" onclick="saveInput(event);">
         </form>
+        <p class="error" id="errorAlreadyExists">Task already exists!</p>
+        <p class="error" id="errorEmpty">Field cannot be empty!</p>
     </div>
 
     <div class="chooseListButtons">
-        <button type="button" onclick="chooseAll()">All</button>
-        <button type="button" onclick="chooseCompleted()">Completed</button>
-        <button type="button" onclick="chooseIncompleted()">Incompleted</button>
+        <button type="button" class="chooseButton" id="allButton" onclick="chooseAll()">All</button>
+        <button type="button" class="chooseButton" id="completedButton" onclick="chooseCompleted()">Completed</button>
+        <button type="button" class="chooseButton" id="incompletedButton" onclick="chooseIncompleted()">Incompleted</button>
     </div>
 
     <div class="taskList" id="taskList"></div>
 
-    <div class="clearButton">
-        <button type="button" onclick="clearAll()">Clear All</button>
+    <div class="bottomButtons" id="bottomButtons">
+        <button type="button" class="markButton" id="markButton" onclick="markAll()">Mark all as done</button>
+        <button type="button" class="clearButton" id="clearButton" onclick="clearAll()">Clear All</button>
     </div>
 
     <script src="myScript.js"></script>
